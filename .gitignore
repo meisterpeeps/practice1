@@ -1,0 +1,8 @@
+node_modules/
+client/dist/
+secrets/
+.vscode/
+.idea/
+stats.json
+
+client/public/scripts/
