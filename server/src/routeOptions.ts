@@ -2,58 +2,26 @@ import * as fastify from 'fastify'
 
 
 
-export const getManyOpts: fastify.RouteShorthandOptions = {    
+export const suggestionsOptions: fastify.RouteShorthandOptions = {
     schema: {
-      querystring: {
-            page: { type: 'number' },
-            minPrice: {type: 'number'},
-            maxPrice: {type: 'number'},
-            search: {type: 'string'},
-            sort: {type: 'string'} // typeSort
-      },
-      response: {
-        200: {
-          type: 'object',
-          properties: {
-              pageProducts: {
+        querystring: {
+            value: { type: 'string' },
+            searchType: { type: 'string' }
+        },
+        response: {
+            200: {
                 type: 'array',
                 items: {
                     type: 'object',
                     properties: {
-                        _id: {type: 'string'},
-                        price: {type: 'string'},
-                        image: {type: 'string'},
-                        about: {type: 'string'},
-                        name: {type: 'string'}
+                        id: { type: 'number' },
+                        name: { type: 'string' },
+                        street: { type: 'string' },
+                        city: { type: 'string' },
+                        state: { type: 'string' }
                     }
-                }
-              },
-              pages: {type: 'number'},
-              productCount: {type: 'number'},
-              page: {type: 'number'}
-          }
-        }
-      }
-    }
-}
-
-export const getSingleOpts: fastify.RouteShorthandOptions = {
-    schema: {
-        querystring: {
-            id: { type: 'string' },
-        },
-        response: {
-            200: {
-                type: 'object',
-                properties: {
-                    _id:  {type: 'string'},
-                    price: {type: 'string'},
-                    image: {type: 'string'},
-                    about: {type: 'string'},
-                    name: {type: 'string'}
                 }
             }
         }
     }
 }
-  

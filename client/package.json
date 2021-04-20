@@ -28,10 +28,13 @@
     "typescript-plugin-styled-components": "^1.4.4"
   },
   "dependencies": {
+    "@types/react-autosuggest": "^9.3.14",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "constate": "^2.0.0",
+    "css-loader": "^3.6.0",
     "react": "^16.13.1",
+    "react-autosuggest": "^10.0.2",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "styled-components": "^4.3.2"
